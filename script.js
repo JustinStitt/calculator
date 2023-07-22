@@ -11,8 +11,9 @@ buttons = document.querySelectorAll('.calc-button');
 
 
 function buttonClick(value) {
-    isNaN(val) ? handleOp(value) : handleNum(value);
+    isNaN(value) ? handleOp(value) : handleNum(value);
     screen.innerText = buffer;
+    console.log(value);
 }
 
 function handleOp(operation) {
@@ -25,7 +26,7 @@ function handleOp(operation) {
             if(previousOperator === null) {
                 return;
             }
-            flushOperator(parseInt(buffer));
+            doMath(parseInt(buffer));
             previousOperator = null;
             buffer = runningTotal;
             runningTotal = 0;
@@ -86,7 +87,7 @@ function handleNum(digit) {
 }
 
 function init() {
-    buttons.addEventListener('click', function(event) {
+    document.querySelector("calc-buttons").addEventListener('click', function(event) {
         buttonClick(event.target.innerText);
     })
 }
