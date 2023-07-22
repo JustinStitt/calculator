@@ -1,0 +1,89 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+@import url('https://fonts.cdnfonts.com/css/lcd?styles=116383');
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background-image: linear-gradient(130deg, rgb(248, 130, 208), rgb(255, 152, 216), rgb(216, 67, 134));
+    display: flex;
+    font-family: 'LCD', sans-serif;
+    font-display: swap;
+    height: inherit;
+    justify-content: center;
+}
+
+.wrapper {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgb(205, 204, 204);
+    border: 1px solid;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px;
+    padding: 2px;
+    color: #232323;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.34);
+    flex-basis: 400px;
+    height: 540px;
+    padding: 20px 35px;
+}
+
+.screen {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0px 0.5px 30px rgb(52, 52, 52 0.1);
+    margin-top: 10%;
+    border-radius: 3px;
+    overflow: auto;
+    padding: 20px;
+    font-size: 35px;
+    text-align: right;
+    width: 326px;
+}
+
+.calc-button-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+.calc-button {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    width: 75px;
+    height: 55px;
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35 0.1);
+    color: #232323;
+    flex-basis: 23%;
+    font-family: "Gill Sans", sans-serif;
+    font-size: larger;
+
+}
+
+.calc-button.op {
+    background-color: rgba(255, 102, 204);
+    color:#fff;
+}
+
+.calc-button.transparent {
+    color: #323232;
+    backdrop-filter: blur(5.5px);
+    background-color: rgba(255, 102, 204, 0.5);
+}
+
